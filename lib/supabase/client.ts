@@ -3,7 +3,7 @@ type AuthResult = { error: { message: string } | null };
 type SignUpInput = {
   email: string;
   password: string;
-  options?: { data?: Record<string, unknown> };
+  options?: { data?: Record<string, unknown>; emailRedirectTo?: string };
 };
 
 const storageKey = "tp_session_token";
@@ -37,7 +37,7 @@ async function post(path: string, body: Record<string, unknown>) {
 
 function saveSession(accessToken?: string) {
   if (!accessToken) return;
-  document.cookie = `tp_session=1; Path=/; SameSite=Lax`;
+  document.cookie = "tp_session=1; Path=/; SameSite=Lax";
   localStorage.setItem(storageKey, accessToken);
 }
 
@@ -48,7 +48,8 @@ export function createClient() {
         const { response, data } = await post("/auth/v1/signup", {
           email: input.email,
           password: input.password,
-          data: input.options?.data
+          data: input.options?.data,
+          email_redirect_to: input.options?.emailRedirectTo
         });
 
         if (!response.ok) {
