@@ -1,3 +1,4 @@
+import { BackLink } from "@/components/back-link";
 import { PERMISSIONS, ROLE_LABELS, ROLE_DEFAULT_PERMISSIONS, type RoleSlug } from "@/lib/auth/rbac";
 
 const user = { id: "1", name: "Nick Jones", role: "owner" as RoleSlug, email: "nick@example.com" };
@@ -7,6 +8,7 @@ export default function UserDetailPage() {
 
   return (
     <main className="settings-shell">
+      <BackLink href="/settings/users" label="Back to users" />
       <h1>{user.name}</h1>
       <p>{user.email}</p>
       <label className="field">

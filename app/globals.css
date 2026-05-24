@@ -33,3 +33,5 @@ input { background: #0d1428; color: #fff; }
 .field select { background:#0d1428; color:#fff; border:1px solid #2a355f; border-radius:10px; padding:.55rem .7rem; }
 .perm-grid { display:grid; gap:.5rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
 .perm-item { display:flex; align-items:center; gap:.55rem; border:1px solid #2a355f; border-radius:10px; padding:.6rem .7rem; background:#0d1428; }
+.back-link { display:inline-flex; align-items:center; gap:.35rem; color:#8fb3ff; text-decoration:none; margin-bottom:.45rem; font-weight:600; }
+.back-link:hover { color:#bfd1ff; }
