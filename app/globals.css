@@ -54,3 +54,10 @@ input { background: #0d1428; color: #fff; }
 .job-list { display:grid; gap:.5rem; margin-top:.6rem; max-height:540px; overflow:auto; }
 .job-card { background:#0d1428; border:1px solid #2a355f; border-radius:10px; padding:.6rem; }
 .job-card p { margin:.2rem 0 0; color:#b8c4ee; font-size:.88rem; }
+.customer-form { display:grid; gap:1rem; margin-top:.8rem; }
+.customer-form section { background:#0d1428; border:1px solid #2a355f; border-radius:12px; padding:.8rem; }
+.customer-form h2 { margin:.1rem 0 .75rem; font-size:1.05rem; }
+.form-grid-two { display:grid; grid-template-columns: repeat(2,minmax(220px,1fr)); gap:.65rem .75rem; }
+.field textarea { background:#0d1428; color:#fff; border:1px solid #2a355f; border-radius:10px; padding:.7rem .8rem; resize:vertical; }
+.actions-row { display:flex; justify-content:flex-end; gap:.55rem; }
+@media (max-width: 760px) { .form-grid-two { grid-template-columns: 1fr; } }

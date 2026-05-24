@@ -1,0 +1,21 @@
+export type CustomerInput = {
+  customerType: 'business' | 'individual';
+  businessName: string;
+  tradingName: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  mobile: string;
+  addressLine1: string;
+  addressLine2: string;
+  suburb: string;
+  city: string;
+  postCode: string;
+  country: string;
+  paymentTermsDays: number;
+  hourlyRate: string;
+  materialMarkupPercent: string;
+  materialGpPercent: string;
+  notes: string;
+};
