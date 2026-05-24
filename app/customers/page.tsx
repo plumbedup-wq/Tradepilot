@@ -1,3 +1,4 @@
+import { TopNav } from '@/components/top-nav';
 import Link from 'next/link';
 import { BackLink } from '@/components/back-link';
 
@@ -8,6 +9,8 @@ const mockCustomers = [
 
 export default function CustomersPage() {
   return (
+    <>
+      <TopNav />
     <main className="settings-shell">
       <BackLink href="/dashboard" label="Back to dashboard" />
       <div className="settings-head">
@@ -25,5 +28,6 @@ export default function CustomersPage() {
         ))}
       </div>
     </main>
+    </>
   );
 }

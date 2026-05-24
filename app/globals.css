@@ -61,3 +61,10 @@ input { background: #0d1428; color: #fff; }
 .field textarea { background:#0d1428; color:#fff; border:1px solid #2a355f; border-radius:10px; padding:.7rem .8rem; resize:vertical; }
 .actions-row { display:flex; justify-content:flex-end; gap:.55rem; }
 @media (max-width: 760px) { .form-grid-two { grid-template-columns: 1fr; } }
+.top-nav { position: sticky; top: 0; z-index: 30; background: rgba(4,10,28,.95); border-bottom: 1px solid #26345c; }
+.top-nav-inner { width:min(1400px,96vw); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:.65rem .1rem; }
+.top-nav nav { display:flex; gap:.35rem; flex-wrap:wrap; }
+.brand-mini { color:#e9efff; text-decoration:none; font-weight:800; letter-spacing:.02em; margin-right:.8rem; }
+.nav-link { color:#b9c8f6; text-decoration:none; padding:.45rem .7rem; border:1px solid transparent; border-radius:9px; }
+.nav-link:hover { border-color:#324778; background:#111c3a; color:#fff; }
+.shell-with-nav { min-height: calc(100vh - 58px); }

@@ -1,5 +1,6 @@
 'use client';
 
+import { TopNav } from '@/components/top-nav';
 import { FormEvent, useState } from 'react';
 import Link from 'next/link';
 import { BackLink } from '@/components/back-link';
@@ -41,6 +42,8 @@ export default function NewCustomerPage() {
   }
 
   return (
+    <>
+      <TopNav />
     <main className="settings-shell">
       <BackLink href="/customers" label="Back to customer hub" />
       <div className="settings-head">
@@ -98,5 +101,6 @@ export default function NewCustomerPage() {
         </div>
       </form>
     </main>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { LogoutButton } from "@/components/logout-button";
+import { TopNav } from "@/components/top-nav";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -14,12 +15,20 @@ export default async function DashboardPage() {
   }
 
   return (
-    <main className="shell">
-      <section className="card">
-        <h1>Dashboard</h1>
-        <p>You are signed in as {user.email}.</p>
-        <div style={{display:"grid",gap:"0.5rem"}}><Link href="/settings/users" className="form-btn" style={{textAlign:"center",textDecoration:"none"}}>Manage Users</Link><Link href="/schedule" className="form-btn" style={{textAlign:"center",textDecoration:"none"}}>Open Schedule</Link><Link href="/customers" className="form-btn" style={{textAlign:"center",textDecoration:"none"}}>Customer Hub</Link><LogoutButton /></div>
-      </section>
-    </main>
+    <>
+      <TopNav />
+      <main className="shell shell-with-nav">
+        <section className="card">
+          <h1>Dashboard</h1>
+          <p>You are signed in as {user.email}.</p>
+          <div style={{ display: "grid", gap: "0.5rem" }}>
+            <Link href="/settings/users" className="form-btn" style={{ textAlign: "center", textDecoration: "none" }}>Manage Users</Link>
+            <Link href="/schedule" className="form-btn" style={{ textAlign: "center", textDecoration: "none" }}>Open Schedule</Link>
+            <Link href="/customers" className="form-btn" style={{ textAlign: "center", textDecoration: "none" }}>Customer Hub</Link>
+            <LogoutButton />
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

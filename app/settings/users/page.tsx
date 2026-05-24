@@ -1,3 +1,4 @@
+import { TopNav } from '@/components/top-nav';
 import Link from "next/link";
 import { ROLE_LABELS, type RoleSlug } from "@/lib/auth/rbac";
 
@@ -9,6 +10,8 @@ const mockUsers = [
 
 export default function UsersPage() {
   return (
+    <>
+      <TopNav />
     <main className="settings-shell">
       <div className="settings-head">
         <h1>Users & Permissions</h1>
@@ -24,5 +27,6 @@ export default function UsersPage() {
         ))}
       </div>
     </main>
+    </>
   );
 }

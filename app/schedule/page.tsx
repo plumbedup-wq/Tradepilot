@@ -1,3 +1,4 @@
+import { TopNav } from '@/components/top-nav';
 import { BackLink } from '@/components/back-link';
 import { jobQueue, scheduleBlocks, staffLanes } from '@/lib/scheduling/mock-data';
 
@@ -5,6 +6,8 @@ const hours = Array.from({ length: 11 }, (_, i) => i + 6);
 
 export default function SchedulePage() {
   return (
+    <>
+      <TopNav />
     <main className="schedule-page">
       <BackLink href="/dashboard" label="Back to dashboard" />
       <div className="schedule-toolbar">
@@ -77,5 +80,6 @@ export default function SchedulePage() {
         </aside>
       </section>
     </main>
+    </>
   );
 }

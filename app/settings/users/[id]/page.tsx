@@ -1,3 +1,4 @@
+import { TopNav } from '@/components/top-nav';
 import { BackLink } from "@/components/back-link";
 import { PERMISSIONS, ROLE_LABELS, ROLE_DEFAULT_PERMISSIONS, type RoleSlug } from "@/lib/auth/rbac";
 
@@ -7,6 +8,8 @@ export default function UserDetailPage() {
   const rolePermissions = new Set(ROLE_DEFAULT_PERMISSIONS[user.role]);
 
   return (
+    <>
+      <TopNav />
     <main className="settings-shell">
       <BackLink href="/settings/users" label="Back to users" />
       <h1>{user.name}</h1>
@@ -32,5 +35,6 @@ export default function UserDetailPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }
