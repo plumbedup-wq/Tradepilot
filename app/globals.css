@@ -25,3 +25,11 @@ input { background: #0d1428; color: #fff; }
 .form-btn { background: #4b6bff; color: #fff; cursor: pointer; border: none; }
 .form-btn:disabled { opacity: .6; cursor: not-allowed; }
 .message { margin: 0; color: #b9c6ff; font-size: .95rem; }
+.settings-shell { width:min(980px, 92vw); margin: 2rem auto; background:#101a33; border:1px solid #2a355f; border-radius:16px; padding:1rem 1.25rem; }
+.settings-head { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.users-table { display:grid; gap:.65rem; margin-top:1rem; }
+.user-row { display:grid; grid-template-columns: 1.2fr 1fr auto; gap:1rem; background:#0d1428; border:1px solid #2a355f; padding:.75rem .9rem; border-radius:10px; color:#dce4ff; text-decoration:none; }
+.field { display:grid; gap:.35rem; margin: .8rem 0 1rem; }
+.field select { background:#0d1428; color:#fff; border:1px solid #2a355f; border-radius:10px; padding:.55rem .7rem; }
+.perm-grid { display:grid; gap:.5rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+.perm-item { display:flex; align-items:center; gap:.55rem; border:1px solid #2a355f; border-radius:10px; padding:.6rem .7rem; background:#0d1428; }
