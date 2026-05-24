@@ -1,9 +1,11 @@
-import { AuthCard } from "@/components/auth-card";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
-export default function Home() {
-  return (
-    <main className="shell">
-      <AuthCard />
-    </main>
-  );
+export default async function Home() {
+  const supabase = await createClient();
+  const {
+    data: { user }
+  } = await supabase.auth.getUser();
+
+  redirect(user ? "/dashboard" : "/login");
 }

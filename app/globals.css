@@ -6,6 +6,8 @@ body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #0b1020
 .tabs button { border: 1px solid #2a355f; background: transparent; color: #c4ceff; padding: .55rem; border-radius: 10px; cursor: pointer; }
 .tabs button.active { background: #4b6bff; color: #fff; border-color: #4b6bff; }
 .form { display: grid; gap: .75rem; }
-input, .form button { border-radius: 10px; border: 1px solid #2a355f; padding: .7rem .8rem; }
+input, .form-btn { border-radius: 10px; border: 1px solid #2a355f; padding: .7rem .8rem; }
 input { background: #0d1428; color: #fff; }
-.form button { background: #4b6bff; color: #fff; cursor: pointer; border: none; }
+.form-btn { background: #4b6bff; color: #fff; cursor: pointer; border: none; }
+.form-btn:disabled { opacity: .6; cursor: not-allowed; }
+.message { margin: 0; color: #b9c6ff; font-size: .95rem; }
